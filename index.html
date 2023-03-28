@@ -16,6 +16,9 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="indexcss.css">
+    <script src="popupjs.js">
+
+    </script>
 </head>
 
 <body>
@@ -48,7 +51,7 @@
     <!-- ///////////////////////CARD////////////////////////////// -->
     
 
-    <div class="container-fluid">
+    <div class="container">
         <div class="row p-1">
 <!-- ********************************************CARD1************************* -->
             <div class="col-lg-4 col-md-4 col-sm-6 p-1 rounded-3  ">
@@ -234,12 +237,12 @@
         <img src="images/mechanic.jpg"  class="mx-2 rounded-3" alt="image">
 
         <div class="card-body">
-            <p class="float-start">
+            <p class="float-start" >
                 Garage Name
             </p>
             <div class="float-end">
                             
-                         <span><i class="fa-regular fa-star"></i> 4.5</span>  
+                         <button class="btn" onclick="openPopup()"><i class="fa-regular fa-star"></i> 4.5</button>  
                            <p> <span><i class="fa-solid fa-location-dot"></i></span> Location</p>
                         </div>
         </div>
@@ -269,8 +272,37 @@
         </div>
     </div>
 
-    
+    <div class="d-flex justify-content-center align-item-center">
+<div class="bg-black popup text-center text-white " id="popup">
+    <span class="float-end px-3 py-2" onclick="closePopup()" ><i class="fa-solid fa-circle-xmark"></i></span>
+   
+   <div class="py-5"> <h1>Garage Name</h1>
+    <p class="display-1 ">5.0</p>
+    <p>
+        <span><i class="fa-regular fa-star"></i></span>
+        <span><i class="fa-regular fa-star"></i></span> 
+        <span><i class="fa-regular fa-star"></i></span>
+        <span><i class="fa-regular fa-star"></i></span>
+        <span><i class="fa-regular fa-star"></i></span>
+    </p>
+    <button class="btn rounded-5 btn-light">Submit</button>
+</div>
+</div>
+    </div>
 
+    <script>
+ let popupa = document.getElementById("popup");
+
+
+function openPopup(){
+ popupa.classList.add("open-popup");
+    
+}
+function closePopup(){
+ popupa.classList.remove("open-popup");
+    
+}
+    </script>
 </body>
 
 </html>
