@@ -24,7 +24,7 @@
 <body>
     <!-- **********************navbarSTART*************************** -->
 
-    <div class="container-fluid  sticky-top x ">
+    <div class="container-fluid sticky-top x">
         <div class="row p-1 bg-dark text-white  d-flex align-items-center ">
 
             <div class="col-lg-4 col-md-3 col-sm-2 col-3 p-1">
@@ -65,7 +65,7 @@
                         </p>
                          <div class="float-end">
                             
-                            <span type="button" onclick="openPopup('1')"><i class="fa-regular fa-star"></i> 4.5</span>  
+                            <span type="button" onclick="openPopup('1')" id="rating1"><i class="fa-regular fa-star"></i> 1</span>  
 
                            <p> <span><i class="fa-solid fa-location-dot"></i></span> Location</p>
                         </div>
@@ -102,7 +102,7 @@
                         </p>
                         <div class="float-end">
                             
-                            <span type="button" onclick="openPopup('2')"><i class="fa-regular fa-star"></i> 4.5</span>  
+                            <span type="button" onclick="openPopup('2')" id="rating2"><i class="fa-regular fa-star"></i> 2</span>  
   
                            <p> <span><i class="fa-solid fa-location-dot"></i></span> Location</p>
                         </div>
@@ -139,7 +139,7 @@
                         </p>
                         <div class="float-end">
                             
-                            <span type="button" onclick="openPopup('3')"><i class="fa-regular fa-star"></i> 4.5</span>  
+                            <span type="button" onclick="openPopup('3')" id="rating3" ><i class="fa-regular fa-star"></i> 3</span>  
   
                            <p> <span><i class="fa-solid fa-location-dot"></i></span> Location</p>
                         </div>
@@ -175,7 +175,7 @@
                         </p>
                          <div class="float-end">
                             
-                            <span type="button" onclick="openPopup('4')"><i class="fa-regular fa-star"></i> 4.5</span>  
+                            <span type="button" onclick="openPopup('4')" id="rating4"><i class="fa-regular fa-star"></i> 4</span>  
  
                            <p> <span><i class="fa-solid fa-location-dot"></i></span> Location</p>
                         </div>
@@ -210,7 +210,7 @@
             </p>
              <div class="float-end">
                             
-                <span type="button" onclick="openPopup('5')"><i class="fa-regular fa-star"></i> 4.5</span>  
+                <span type="button" onclick="openPopup('5')" id="rating5"><i class="fa-regular fa-star"></i> 5</span>  
 
                            <p> <span><i class="fa-solid fa-location-dot"></i></span> Location</p>
                         </div>
@@ -247,7 +247,7 @@
             </p>
             <div class="float-end">
                             
-                         <span type="button" onclick="openPopup('6')"><i class="fa-regular fa-star"></i> 4.5</span>  
+                         <span type="button" onclick="openPopup('6')" id="rating6"><i class="fa-regular fa-star"></i> 6</span>  
                            <p> <span><i class="fa-solid fa-location-dot"></i></span> Location</p>
                         </div>
         </div>
@@ -282,7 +282,7 @@
     <span class="float-end px-3 py-2" onclick="closePopup()" ><i class="fa-solid fa-circle-xmark"></i></span>
    
    <div class="py-5"> <h1 id="g_name"></h1>
-    <p class="display-1 ">5.0</p>
+    <p class="display-1 " id="rate"></p>
     <p>
         <span><i class="fa-regular fa-star"></i></span>
         <span><i class="fa-regular fa-star"></i></span> 
@@ -301,7 +301,9 @@
 
 function openPopup(val){
     var g = document.getElementById("g"+val).innerHTML;
+    var r = document.getElementById("rating"+val).innerHTML;
     document.getElementById("g_name").innerHTML =g;
+    document.getElementById("rate").innerHTML =r;
  popupa.classList.add("open-popup");
     
 }
