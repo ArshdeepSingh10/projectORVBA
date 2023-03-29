@@ -60,12 +60,13 @@
                     <img src="images/mechanic.jpg" class="mx-2  rounded-3 " alt="image">
 
                     <div class="card-body">
-                        <p class="float-start">
-                            Garage Name
+                        <p class="float-start" id="g1">
+                            Garage Name1
                         </p>
                          <div class="float-end">
                             
-                         <span><i class="fa-regular fa-star"></i> 4.5</span>  
+                            <span type="button" onclick="openPopup('1')"><i class="fa-regular fa-star"></i> 4.5</span>  
+
                            <p> <span><i class="fa-solid fa-location-dot"></i></span> Location</p>
                         </div>
                     </div>
@@ -96,12 +97,13 @@
                     <img src="images/mechanic.jpg"  class="mx-2 rounded-3" alt="image">
 
                     <div class="card-body">
-                        <p class="float-start">
-                            Garage Name
+                        <p class="float-start" id="g2">
+                            Garage Name2
                         </p>
                         <div class="float-end">
                             
-                         <span><i class="fa-regular fa-star"></i> 4.5</span>  
+                            <span type="button" onclick="openPopup('2')"><i class="fa-regular fa-star"></i> 4.5</span>  
+  
                            <p> <span><i class="fa-solid fa-location-dot"></i></span> Location</p>
                         </div>
                       
@@ -132,12 +134,13 @@
                     <img src="images/mechanic.jpg"  class="mx-2 rounded-3" alt="image">
 
                     <div class="card-body">
-                        <p class="float-start">
-                            Garage Name
+                        <p class="float-start" id="g3">
+                            Garage Name3
                         </p>
                         <div class="float-end">
                             
-                         <span><i class="fa-regular fa-star"></i> 4.5</span>  
+                            <span type="button" onclick="openPopup('3')"><i class="fa-regular fa-star"></i> 4.5</span>  
+  
                            <p> <span><i class="fa-solid fa-location-dot"></i></span> Location</p>
                         </div>
                     </div>
@@ -167,12 +170,13 @@
                     <img src="images/mechanic.jpg" class="mx-2 rounded-3" alt="image">
 
                     <div class="card-body">
-                        <p class="float-start">
-                            Garage Name
+                        <p class="float-start" id="g4">
+                            Garage Name4
                         </p>
                          <div class="float-end">
                             
-                         <span><i class="fa-regular fa-star"></i> 4.5</span>  
+                            <span type="button" onclick="openPopup('4')"><i class="fa-regular fa-star"></i> 4.5</span>  
+ 
                            <p> <span><i class="fa-solid fa-location-dot"></i></span> Location</p>
                         </div>
                     </div>
@@ -201,12 +205,13 @@
         <img src="images/mechanic.jpg"  class="mx-2 rounded-3" alt="image">
 
         <div class="card-body">
-            <p class="float-start">
-                Garage Name
+            <p class="float-start" id="g5">
+                Garage Name5
             </p>
              <div class="float-end">
                             
-                         <span><i class="fa-regular fa-star"></i> 4.5</span>  
+                <span type="button" onclick="openPopup('5')"><i class="fa-regular fa-star"></i> 4.5</span>  
+
                            <p> <span><i class="fa-solid fa-location-dot"></i></span> Location</p>
                         </div>
         </div>
@@ -237,12 +242,12 @@
         <img src="images/mechanic.jpg"  class="mx-2 rounded-3" alt="image">
 
         <div class="card-body">
-            <p class="float-start" >
-                Garage Name
+            <p class="float-start" id="g6" >
+                Garage Name6
             </p>
             <div class="float-end">
                             
-                         <span type="button" onclick="openPopup()"><i class="fa-regular fa-star"></i> 4.5</span>  
+                         <span type="button" onclick="openPopup('6')"><i class="fa-regular fa-star"></i> 4.5</span>  
                            <p> <span><i class="fa-solid fa-location-dot"></i></span> Location</p>
                         </div>
         </div>
@@ -276,7 +281,7 @@
 <div class="bg-black popup text-center text-white " >
     <span class="float-end px-3 py-2" onclick="closePopup()" ><i class="fa-solid fa-circle-xmark"></i></span>
    
-   <div class="py-5"> <h1>Garage Name</h1>
+   <div class="py-5"> <h1 id="g_name"></h1>
     <p class="display-1 ">5.0</p>
     <p>
         <span><i class="fa-regular fa-star"></i></span>
@@ -294,7 +299,9 @@
  let popupa = document.getElementById("popup");
 
 
-function openPopup(){
+function openPopup(val){
+    var g = document.getElementById("g"+val).innerHTML;
+    document.getElementById("g_name").innerHTML =g;
  popupa.classList.add("open-popup");
     
 }
