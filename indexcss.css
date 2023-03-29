@@ -5,11 +5,19 @@
     height: 320px;
     width: 400px;
     position: absolute; 
-    top: 50%;
-    visibility: hidden;
+    top: 25%;
+    left: 35%;
+
+    
 
 }
-
+.p{
+    position: fixed;
+    top:0;left: 0;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+}
 .open-popup
 {
    visibility:visible;
