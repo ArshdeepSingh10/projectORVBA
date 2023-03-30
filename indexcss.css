@@ -1,8 +1,9 @@
 .x{
     box-shadow: 2px 3px 5px black;
+   
 }
 .popup{
-    height: 320px;
+    height: 350px;
     width: 400px;
     position: absolute; 
     top: 25%;
@@ -24,3 +25,8 @@
     
 
 }
+.star span:hover{
+color: aqua;   
+
+}
+
