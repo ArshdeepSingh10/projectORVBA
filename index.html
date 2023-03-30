@@ -246,8 +246,8 @@
                 Garage Name6
             </p>
             <div class="float-end">
-                            
-                         <span type="button" onclick="openPopup('6')" id="rating6"><i class="fa-regular fa-star"></i> 6</span>  
+                        
+                         <span type="button" onclick="openPopup(6)" id="rating6"><i class="fa-regular fa-star"></i> 6</span>  
                            <p> <span><i class="fa-solid fa-location-dot"></i></span> Location</p>
                         </div>
         </div>
@@ -281,31 +281,36 @@
 <div class="bg-black popup text-center text-white " >
     <span class="float-end px-3 py-2" onclick="closePopup()" ><i class="fa-solid fa-circle-xmark"></i></span>
    
-   <div class="py-5"> <h1 id="g_name"></h1>
-    <p class="display-1 " id="rate"></p>
+   <div class="py-5">
+   
+    <h1 id="g_name"></h1>
+    <input style="width: 75%; height: 100px; " placeholder="Feedback" type="text"  class="rounded-3 my-3 p-2">
+    
     <p>
-        <span><i class="fa-regular fa-star"></i></span>
-        <span><i class="fa-regular fa-star"></i></span> 
-        <span><i class="fa-regular fa-star"></i></span>
-        <span><i class="fa-regular fa-star"></i></span>
-        <span><i class="fa-regular fa-star"></i></span>
+        <span onclick="addrating(this.id)" class="fs-3" id="1"><i class="fa-regular fa-star"></i></span>
+        <span onclick="addrating(this.id)" class="fs-3" id="2"><i class="fa-regular fa-star"></i></span> 
+        <span onclick="addrating(this.id)" class="fs-3" id="3"><i class="fa-regular fa-star"></i></span>
+        <span onclick="addrating(this.id)" class="fs-3" id="4"><i class="fa-regular fa-star"></i></span>
+        <span onclick="addrating(this.id)" class="fs-3" id="5"><i class="fa-regular fa-star"></i></span>
     </p>
-    <button class="btn rounded-5 btn-light">Submit</button>
+    <button class="btn rounded-5 btn-light" onclick="submit(d)">Submit</button>
 </div>
 </div>
     </div>
 
     <script>
+        
  let popupa = document.getElementById("popup");
 
 
 function openPopup(val){
+    d=val;
     var g = document.getElementById("g"+val).innerHTML;
     var r = document.getElementById("rating"+val).innerHTML;
     document.getElementById("g_name").innerHTML =g;
-    document.getElementById("rate").innerHTML =r;
+
  popupa.classList.add("open-popup");
-    
+    return 1;
 }
 function closePopup(){
  popupa.classList.remove("open-popup");
